@@ -1,5 +1,6 @@
 <%- include("templates/header") %> 
-Sign Up:
+
+<div class="d-flex gap-2 justify-content-center py-5">
 <form action='/submitUser' method='post'>
 <input name='username' type='text' placeholder='username'>
 <br>
@@ -9,31 +10,34 @@ Sign Up:
 <br>
 <button>Submit</button>
 </form>
+</div>
+<div class="text-center">
 <% if (missing) { %>
     
-      <br> username is required <br> <a href='/signup'>try again</a>
+      <br> username is required <br> <a class="btn btn-warning rounded-pill px-3" href='/signup'>try again</a>
  <% } %>
  <% if (missings) { %>
-    <br> email is required <br> <a href='/signup'>try again</a> 
+    <br> email is required <br> <a class="btn btn-warning rounded-pill px-3" href='/signup'>try again</a> 
  <% } %>
  <% if (missingss) { %>
     
-      <br> password is required <br> <a href='/signup'>try again</a> 
+      <br> password is required <br> <a class="btn btn-warning rounded-pill px-3" href='/signup'>try again</a> 
  <% } %>
  <% if (ep) { %>
     
-      <br> email and password is required <br> <a href='/signup'>try again</a>
+      <br> email and password is required <br> <a class="btn btn-warning rounded-pill px-3" href='/signup'>try again</a>
  <% } %>
  <% if (eu) { %>
 
-      <br> username and email is required <br> <a href='/signup'>try again</a>
+      <br> username and email is required <br> <a class="btn btn-warning rounded-pill px-3"  href='/signup'>try again</a>
  <% } %>
  <% if (up) { %>
     
-      br> password and username is required <br> <a href='/signup'>try again</a>
+      br> password and username is required <br> <a class="btn btn-warning rounded-pill px-3" href='/signup'>try again</a>
  <% } %>
  <% if (eup) { %>
     
-      <br> password,username and email is required <br> <a href='/signup'>try again</a>
+      <br> password,username and email is required <br> <a class="btn btn-warning rounded-pill px-3" href='/signup'>try again</a>
  <% } %>
+</div>
 <%- include("templates/footer") %> 

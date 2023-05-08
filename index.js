@@ -104,8 +104,8 @@ app.get('/', (req,res) => {
 		return 	res.render("index");
 	  }
 	  var username = req.session.username;
-	  res.send(
-		`Hello, ${username}! <br> <a href='/members'> Go to Members Area</a> <br> <a href='/logout'> Logout</a> `
+	  res.render("index2",{username:username}
+		
 	  );  
 	
 
