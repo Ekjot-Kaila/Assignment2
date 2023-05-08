@@ -1,3 +1,14 @@
 <%- include("templates/header") %> 
-    You are logged in!
-<%- include("templates/footer") %> 
+    Hello,<%=username %>! <br>
+     
+      <br>
+     
+       
+       <div class="row mb-3 text-center">
+        <div class="col-md-4 themed-grid-col"><img class="img-fluid"src='/giphy2.gif' ></div>
+        <div class="col-md-4 themed-grid-col"> <img class="img-fluid"src='/giphy1.gif' ></div>
+        <div class="col-md-4 themed-grid-col"><img class="img-fluid"src='/giphy.gif' ></div>
+      </div>
+      <a class="btn btn-info rounded-pill px-3" href='/logout'>Logout</a>
+
+       <%- include("templates/footer") %> 

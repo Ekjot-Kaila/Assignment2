@@ -1,8 +1,39 @@
 <%- include("templates/header") %> 
-    create user
-    <form action='/submitUser' method='post'>
-    <input name='username' type='text' placeholder='username'>
-    <input name='password' type='password' placeholder='password'>
-    <button>Submit</button>
-    </form>
+Sign Up:
+<form action='/submitUser' method='post'>
+<input name='username' type='text' placeholder='username'>
+<br>
+<input name='email' type='text' placeholder='email'>
+<br>
+<input name='password' type='password' placeholder='password'>
+<br>
+<button>Submit</button>
+</form>
+<% if (missing) { %>
+    
+      <br> username is required <br> <a href='/signup'>try again</a>
+ <% } %>
+ <% if (missings) { %>
+    <br> email is required <br> <a href='/signup'>try again</a> 
+ <% } %>
+ <% if (missingss) { %>
+    
+      <br> password is required <br> <a href='/signup'>try again</a> 
+ <% } %>
+ <% if (ep) { %>
+    
+      <br> email and password is required <br> <a href='/signup'>try again</a>
+ <% } %>
+ <% if (eu) { %>
+
+      <br> username and email is required <br> <a href='/signup'>try again</a>
+ <% } %>
+ <% if (up) { %>
+    
+      br> password and username is required <br> <a href='/signup'>try again</a>
+ <% } %>
+ <% if (eup) { %>
+    
+      <br> password,username and email is required <br> <a href='/signup'>try again</a>
+ <% } %>
 <%- include("templates/footer") %> 
